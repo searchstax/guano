@@ -1,5 +1,8 @@
 package com.d2fn.guano;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
@@ -81,6 +84,10 @@ public class DumpJob implements Job, Watcher {
 
     private void writeZnode(ZooKeeper zk, String outFile, String znode) throws Exception {
         Stat stat = new Stat();
+        File f = new File(outFile);
+        if(!f.exists()) {
+            f.createNewFile();
+        }
         byte[] data = zk.getData(znode, false, stat);
         if(data != null && data.length > 0 && stat.getEphemeralOwner() == 0) {
             String str = new String(data);
