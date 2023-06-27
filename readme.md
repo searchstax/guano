@@ -27,12 +27,13 @@ Follow below steps to release a new version when any of the above mentioned chan
   a. This will generate `guano-<version>.jar` binary in `target/` directory.
 
 ## Upload Jar to s3
-### QA: 
+#### QA: 
 https://s3.console.aws.amazon.com/s3/buckets/ss-deployment-artifacts-qa?prefix=searchstax/solr/&region=us-east-1
-### Staging: 
+#### Staging: 
 https://s3.console.aws.amazon.com/s3/buckets/ss-deployment-artifacts-staging?region=us-west-1&prefix=searchstax/solr/
-### PROD: 
+#### PROD: 
 https://s3.console.aws.amazon.com/s3/buckets/searchstax-repo-f3g03kdjf?region=us-east-1&prefix=searchstax/solr/&showversions=false
+
 https://s3.console.aws.amazon.com/s3/buckets/searchstax-repo-f3g03kdjf-frankfurt?region=eu-central-1&prefix=searchstax/solr/&showversions=false
 
 1. The jar needs to be uploaded to all the 4 buckets listed above.
