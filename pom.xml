@@ -4,7 +4,7 @@
 
     <groupId>com.d2fn</groupId>
     <artifactId>guano</artifactId>
-    <version>0.1a</version>
+    <version>0.2a</version>
 
     <name>guano</name>
     <packaging>jar</packaging>
